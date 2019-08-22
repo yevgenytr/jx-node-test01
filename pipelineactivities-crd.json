@@ -1,0 +1,20 @@
+{
+  "kind": "CustomResourceDefinition", 
+  "spec": {
+    "scope": "Namespaced", 
+    "version": "v1", 
+    "group": "jenkins.io", 
+    "names": {
+      "shortNames": [
+        "pa"
+      ], 
+      "kind": "PipelineActivities", 
+      "plural": "pipelineactivities", 
+      "singular": "pipelineactivity"
+    }
+  }, 
+  "apiVersion": "apiextensions.k8s.io/v1beta1", 
+  "metadata": {
+    "name": "pipelineactivities.jenkins.io"
+  }
+}
