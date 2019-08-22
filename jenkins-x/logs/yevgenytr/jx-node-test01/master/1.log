@@ -1,44 +1,102 @@
-Step: step-credential-initializer-pslt4:
+Step: step-credential-initializer-hcb2r:
 
-{"level":"warn","ts":1566467331.41593,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1566467331.4162486,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
-Step: step-working-dir-initializer-zls5r:
+{"level":"warn","ts":1566467347.2628593,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1566467347.2633474,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: step-working-dir-initializer-krsw5:
 
-{"level":"warn","ts":1566467332.6995368,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
-{"level":"info","ts":1566467332.7004297,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+{"level":"warn","ts":1566467348.5717845,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1566467348.572746,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/charts/**-node-test01\""}
 Step: step-place-tools:
 
-Step: step-git-source-meta-*********-**-node-test01-m-nbfnp:
+Step: step-git-source-*********-**-node-test01-master-9h55l:
 
-{"level":"warn","ts":1566467338.7624476,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1566467338.961997,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/*********/**-node-test01.git @ 739073de53a3ef9d1e718971209a26e81226bcb0 in path /workspace/source"}
+{"level":"warn","ts":1566467374.612621,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1566467374.8092735,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/*********/**-node-test01.git @ v0.0.1 in path /workspace/source"}
 Step: step-git-merge:
 
-{"level":"info","msg":"Using SHAs from PULL_REFS=master:739073de53a3ef9d1e718971209a26e81226bcb0","time":"2019-08-22T09:48:59Z"}
-{"level":"warning","msg":"no SHAs to merge, falling back to initial cloned commit","time":"2019-08-22T09:48:59Z"}
-Step: step-merge-pull-refs:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+Step: step-setup-**-git-credentials:
 
-SKIP merge-pull-refs: Nothing to merge
-Step: step-create-effective-pipeline:
+Generated Git credentials file /workspace/xdg_config/git/credentials
+Step: step-build-npmrc:
 
-{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-08-22T09:48:59Z"}
-{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions","time":"2019-08-22T09:48:59Z"}
-{"level":"info","msg":"Effective pipeline written to jenkins-x-effective.yml","time":"2019-08-22T09:49:00Z"}
-Step: step-create-tekton-crds:
+WARNING: failed to find Secret npm-token in namespace **
+Step: step-build-npm-install:
 
-{"level":"info","msg":"running command: echo \\$(**-release-version) \u003e VERSION","time":"2019-08-22T09:49:02Z"}
-{"level":"info","msg":"","time":"2019-08-22T09:49:02Z"}
-{"level":"info","msg":"running command: ** step tag --version \\$(cat VERSION)","time":"2019-08-22T09:49:02Z"}
-{"level":"info","msg":"Updating chart version in charts/**-node-test01/Chart.yaml to 0.0.1","time":"2019-08-22T09:49:02Z"}
-{"level":"info","msg":"Updating repository in charts/**-node-test01/values.yaml to 535518648590.dkr.ecr.us-east-2.amazonaws.com/*********/**-node-test01","time":"2019-08-22T09:49:02Z"}
-{"level":"info","msg":"Updating tag in charts/**-node-test01/values.yaml to 0.0.1","time":"2019-08-22T09:49:02Z"}
-{"level":"info","msg":"Tag v0.0.1 created and pushed to remote origin","time":"2019-08-22T09:49:05Z"}
-{"level":"info","msg":"","time":"2019-08-22T09:49:05Z"}
-{"level":"warning","msg":"failed to find secret kaniko-secret in namespace **: secrets \"kaniko-secret\" not found","time":"2019-08-22T09:49:05Z"}
-{"level":"info","msg":"PipelineActivity for *********-**-node-test01-master-1","time":"2019-08-22T09:49:05Z"}
-{"level":"info","msg":"Applying changes ","time":"2019-08-22T09:49:05Z"}
-{"level":"info","msg":"upserted PipelineResource *********-**-node-test01-master for the git repository https://github.com/*********/**-node-test01.git and branch master","time":"2019-08-22T09:49:05Z"}
-{"level":"info","msg":"upserted Task *********-**-node-test01-master-from-build-pack-1","time":"2019-08-22T09:49:05Z"}
-{"level":"info","msg":"upserted Pipeline *********-**-node-test01-master-1","time":"2019-08-22T09:49:05Z"}
-{"level":"info","msg":"created PipelineRun *********-**-node-test01-master-1","time":"2019-08-22T09:49:05Z"}
-{"level":"info","msg":"created PipelineStructure *********-**-node-test01-master-1","time":"2019-08-22T09:49:05Z"}
+npm WARN REPLACE_ME@1.0.0 No repository field.
+npm WARN REPLACE_ME@1.0.0 No license field.
+
+added 124 packages from 110 contributors and audited 154 packages in 2.808s
+found 6 vulnerabilities (1 moderate, 5 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+Step: step-build-npm-test:
+
+
+> REPLACE_ME@1.0.0 test /workspace/source
+> echo "no test specified" && exit 0
+
+no test specified
+Step: step-build-container-build:
+
+[36mINFO[0m[0000] Downloading base image node:9-slim           
+[36mINFO[0m[0000] Error while retrieving image from cache: getting file info: stat /workspace/sha256:0e0175bbe4f8d9d104590d8d2c591017874e30977cb71aaff1cf6fa99479575c: no such file or directory 
+[36mINFO[0m[0000] Downloading base image node:9-slim           
+[36mINFO[0m[0000] Executing 0 build triggers                   
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] Using files from context: [/workspace/source] 
+[36mINFO[0m[0001] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0001] Taking snapshot of full filesystem...        
+[36mINFO[0m[0001] ENV PORT 8080                                
+[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0001] EXPOSE 8080                                  
+[36mINFO[0m[0001] cmd: EXPOSE                                  
+[36mINFO[0m[0001] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0001] WORKDIR /usr/src/app                         
+[36mINFO[0m[0001] cmd: workdir                                 
+[36mINFO[0m[0001] Changed working directory to /usr/src/app    
+[36mINFO[0m[0001] Creating directory /usr/src/app              
+[36mINFO[0m[0001] Taking snapshot of files...                  
+[36mINFO[0m[0001] Using files from context: [/workspace/source] 
+[36mINFO[0m[0001] COPY . .                                     
+[36mINFO[0m[0001] Taking snapshot of files...                  
+[36mINFO[0m[0002] CMD ["npm", "start"]                         
+[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
+2019/08/22 09:49:45 pushed blob: sha256:9db12d435cee8f2d24607538fd41421d935c717d6408074548e7434f51a773be
+2019/08/22 09:49:45 pushed blob: sha256:21d3457efa9f2426b22bf30bab8e38fcafbd9ca5f403327db4e7ef10853264e2
+2019/08/22 09:49:45 pushed blob: sha256:196b8e3c919d5639193ba6c6e54774528942041bbc37606631a2250502985c3c
+2019/08/22 09:49:45 pushed blob: sha256:7d083412657baa2dafba8d093034ef26f9ed2c90fb6ed95f76bb55aff03ed429
+2019/08/22 09:49:45 pushed blob: sha256:e01bd28a434b56ffd2a3fe9aa99b9b69aecca69904843edd30b1ee7150d79904
+2019/08/22 09:49:46 pushed blob: sha256:e083132846c4e782108d16951ba823b82704f3c0720d753c09788c03e9f47e46
+2019/08/22 09:49:49 pushed blob: sha256:a88538b9cd05cfa611e43a25582a95ad7879f6fa708b0386a26b71ee62235bb3
+2019/08/22 09:49:50 pushed blob: sha256:5bba3ecb4cd6374a19da45f2a3db0a9c0804984358b3bb4b666c28944016e5ff
+2019/08/22 09:49:50 535518648590.dkr.ecr.us-east-2.amazonaws.com/*********/**-node-test01:0.0.1: digest: sha256:208b4be58a782836b4812c5a34969390fcb73eb6f0c2778e71949c9f9a4748d8 size: 1406
+Step: step-build-post-build:
+
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+Step: step-promote-changelog:
+
+Converted /workspace/source/charts/**-node-test01 to an unshallow repository
+no previous commit version found so change diff unavailable
+Step: step-promote-helm-release:
+
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file **-node-test01-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+Step: step-promote-**-promote:
+
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+Promoting app **-node-test01 version 0.0.1 to namespace **-staging
+Created Pull Request: https://github.com/*********/environment-elkshade-staging/pull/2
+Added label  to Pull Request https://github.com/*********/environment-elkshade-staging/pull/2
+WARNING: Failed to query the Pull Request last commit status for https://github.com/*********/environment-elkshade-staging/pull/2 ref a8b21c240e66adf5fc08a95c39b97420b98fcb6f Could not find a status for repository *********/environment-elkshade-staging with ref a8b21c240e66adf5fc08a95c39b97420b98fcb6f
+WARNING: Failed to query the Pull Request last commit status for https://github.com/*********/environment-elkshade-staging/pull/2 ref a8b21c240e66adf5fc08a95c39b97420b98fcb6f Could not find a status for repository *********/environment-elkshade-staging with ref a8b21c240e66adf5fc08a95c39b97420b98fcb6f
+Pull Request https://github.com/*********/environment-elkshade-staging/pull/2 is merged at sha be21fc77b20a00279c53864ccd727c0d21013542
+Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace **-staging for names **-node-test01, **-**-node-test01, **-staging-**-node-test01
